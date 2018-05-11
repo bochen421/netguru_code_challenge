@@ -1,5 +1,15 @@
-h1 Netguru Code College
-h3 Citations
-table
-  tbody
-    = render partial: 'citation', collection: @citations
+.row
+  .col-lg-12
+    h1.page-header Netguru Code College by Arek Bochenek
+.row
+  .col-lg-12
+    h3= t('.citations')
+.row
+  .col-lg-12
+    table
+      tbody
+        = render partial: 'citation', collection: @citations
+    br= link_to new_citation_path
+      .btn.btn-sm.btn-primary
+        i.fa.fa-dot-circle-o.space
+        = t('.new_citation')
