@@ -41,5 +41,5 @@ en:
       cancel: Cancel
       add_new_citation: Add a new citation
     create:
-      citation_created: Citation has added to the top of the list.
+      citation_created: Citation has been added to the top of the list.
       failed_to_create_citation: "Citation was not created. Possible cause: missing body text."
