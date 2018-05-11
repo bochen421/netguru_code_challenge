@@ -6,10 +6,9 @@
     h3= t('.citations')
 .row
   .col-lg-12
-    table
-      tbody
-        = render partial: 'citation', collection: @citations
-    br= link_to new_citation_path
+    ul
+      = render partial: 'citation', collection: @citations
+    = link_to new_citation_path
       .btn.btn-sm.btn-primary
         i.fa.fa-dot-circle-o.space
         = t('.new_citation')
