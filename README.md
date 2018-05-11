@@ -1,24 +1,30 @@
-# README
+# Netguru Code College
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technology
 
-Things you may want to cover:
+| Name |  Version |
+| :--: | :---: |
+| [Ruby](https://www.ruby-lang.org) | 2.4.3 |
+| [Ruby on Rails](http://www.rubyonrails.org/) | 5.1.6 |
 
-* Ruby version
+## Links
 
-* System dependencies
+[Heroku](https://warm-garden-16220.herokuapp.com/)
 
-* Configuration
+## Setup
 
-* Database creation
+Make sure you have [Ruby](https://www.ruby-lang.org) and [Bundler](http://bundler.io) installed.
 
-* Database initialization
+#### Clone the repository
 
-* How to run the test suite
+    $ git clone git@github.com:bochen421/netguru_code_challenge.git && cd netguru_code_challenge
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Install gems
 
-* Deployment instructions
+    $ bundle install
 
-* ...
+#### Run the application
+
+    $ rails server
+
+Your app should now be running on [localhost:3000](http://localhost:3000).
