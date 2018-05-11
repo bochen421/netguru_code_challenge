@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 describe CitationsController do
-  let(:citation_params) { attributes_for(:citation) }
-  let(:valid_citation) { double(:citation, save: true) }
-  let(:invalid_citation) { double(:citation, save: false) }
-
-  describe 'GET index' do
+  describe 'GET /citations' do
     before(:example) {get :index}
 
-    it "is a success" do
+    it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
   end
 
-  describe 'POST #create' do
+  describe 'POST /citations' do
+    let(:citation_params) { attributes_for(:citation) }
+    let(:valid_citation) { double(:citation, save: true) }
+    let(:invalid_citation) { double(:citation, save: false) }
+
     context 'when citation is validated successfully' do
       before { allow(Citation).to receive(:new) { valid_citation } }
 
@@ -33,7 +33,6 @@ describe CitationsController do
 
       it 'renders new' do
         post :create, params: { citation: citation_params }
-        expect(response).not_to redirect_to new_citation_path
         expect(response).not_to redirect_to citations_path
       end
 
